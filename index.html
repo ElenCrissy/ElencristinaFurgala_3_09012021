@@ -7,12 +7,15 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         
         <link rel="stylesheet" href="fontawesome/css/all.min.css">
         
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         
         <title>Oh my food!</title>
         
@@ -30,9 +33,9 @@
 
         </header>
 
-        <section id="section1_localisation"> <!-- pas sûre id ou class-->
+        <section class="section1_localisation"> <!-- pas sûre id ou class-->
 
-            <div id="localisation_recherche"> <!-- pas sûre id ou class-->
+            <div class="section1_localisation__recherche"> <!-- pas sûre id ou class-->
                     
                 <form method="post" action="traitement.php">
 
@@ -40,7 +43,7 @@
 
                         <i class="fas fa-map-marker-alt" id="iconlocation"></i>
 
-                        <input type="text" name="location" id="location" placeholder="Paris, France" /> 
+                        <input type="text" name="location" class="location" placeholder="Paris, France" /> 
 
                     </p>
 
@@ -48,42 +51,42 @@
                 
             </div>
 
-            <div id="presentation">
+            <div class="section1_localisation__presentation">
 
                 <p>
                     <span>Réserver le menu qui vous convient</span>
 
-                    Découvrez des restaurants d'exception, sélectionnés par nos soins.
-
-                    <input type="button" value="Explorer nos restaurants" class="button" />
+                    <br />Découvrez des restaurants d'exception, sélectionnés par nos soins.
 
                 </p>
+
+                <input type="button" value="Explorer nos restaurants" class="button" />
 
             </div>
 
         </section>
 
-        <section id="section2_fonctionnement">
+        <section class="section2_fonctionnement">
 
             <h2>Fonctionnement</h2>
 
             <div class="element">
 
                 <div class="element__numero">1</div>
-                <i class="fas fa-mobile-alt" class="element__icon"></i>
+                <i class="fas fa-mobile-alt element__icon"></i>
                 <div class="element__action">Choisissez un restaurant</div>
                 
             </div>
 
             <div class="element">
                 <div class="element__numero">2</div>
-                <i class="fas fa-list" class="element__icon"></i>
+                <i class="fas fa-list element__icon"></i>
                 <div class="element__action">Composez votre menu</div>
             </div>
 
             <div class="element">
                 <div class="element__numero">3</div>
-                <i class="fas fa-store" class="element__icon"></i>
+                <i class="fas fa-store element__icon"></i>
                 <div class="element__action">Dégustez au restaurant</div>
             </div>
 
@@ -105,7 +108,12 @@
                             <p>Ménilmontant</p>
                         </figure>
 
-                        <i class="far fa-heart"></i>
+                        <div class="nouveau">
+                            <p>Nouveau</p>
+                        </div>
+
+                        <i class="far fa-heart icon_heart"></i>
+
                     </a>
 
                 </div>
@@ -121,7 +129,12 @@
                             <p>Charonne</p>
                         </figure>
 
-                        <i class="far fa-heart"></i>
+                        <div class="nouveau">
+                            <p>Nouveau</p>
+                        </div>
+
+                        <i class="far fa-heart icon_heart"></i>
+                        
                     </a>
 
                 </div>
@@ -137,7 +150,7 @@
                             <p>Cité Rouge</p>
                         </figure>
 
-                        <i class="far fa-heart"></i>
+                        <i class="far fa-heart icon_heart"></i>
                     </a>
 
                 </div>
@@ -153,7 +166,7 @@
                             <p>Folie-Méricourt</p>
                         </figure>
 
-                        <i class="far fa-heart"></i>
+                        <i class="far fa-heart icon_heart"></i>
                     </a>
 
                 </div>
@@ -171,7 +184,7 @@
             <div class="footer__actions">
 
                 <a href="#">
-                    <i class="fas fa-utensils" class="icon_footer"></i>
+                    <i class="fas fa-utensils icon_footer"></i>
                     Proposer un restaurant
                 </a>
 
@@ -181,7 +194,7 @@
             <div class="footer__actions">
 
                 <a href="#">
-                    <i class="fas fa-hands-helping" class="icon_footer"></i>
+                    <i class="fas fa-hands-helping icon_footer"></i>
                     Devenir Partenaire
                 </a>
 

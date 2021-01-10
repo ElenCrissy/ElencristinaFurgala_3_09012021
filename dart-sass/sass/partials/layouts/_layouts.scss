@@ -1,0 +1,36 @@
+// Header
+
+header{
+    width: 100%;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+// Section 1 - Localisation
+
+.section1_localisation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__presentation{
+        text-align: center;
+        background-color: $colour-background;
+    }
+}
+
+// Section 2 - Fonctionnement
+
+.section2_fonctionnement{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.element{
+    display: flex;
+    align-items: center;
+}
+
+// Section 3 - Restaurants
+
+
+// Footer

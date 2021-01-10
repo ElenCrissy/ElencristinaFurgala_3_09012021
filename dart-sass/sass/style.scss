@@ -1,3 +1,6 @@
-body{
-    background-color: pink;
-}
+@import "partials/base/base"; //fondation du site//
+@import "partials/components/components"; //blocs BEM indépendants type bouton//
+@import "partials/layouts/layouts"; //blocs BEM//
+@import "partials/pages/pages"; //pas sûre si utile//
+@import "partials/utils/utils"; //variables, fonctions, mixins et %placeholders pour extensions//
+
