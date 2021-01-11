@@ -53,12 +53,9 @@
 
             <div class="section1_localisation__presentation">
 
-                <p>
-                    <span>Réserver le menu qui vous convient</span>
-
-                    <br />Découvrez des restaurants d'exception, sélectionnés par nos soins.
-
-                </p>
+                <h2>Réserver le menu qui vous convient</h2>
+                
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
 
                 <input type="button" value="Explorer nos restaurants" class="button" />
 
@@ -70,71 +67,59 @@
 
             <h2>Fonctionnement</h2>
 
-            <div class="element">
+            <div class="etapes">
 
-                <div class="element__numero">1</div>
-                <i class="fas fa-mobile-alt element__icon"></i>
-                <div class="element__action">Choisissez un restaurant</div>
-                
-            </div>
+                <div class="element">
 
-            <div class="element">
-                <div class="element__numero">2</div>
-                <i class="fas fa-list element__icon"></i>
-                <div class="element__action">Composez votre menu</div>
-            </div>
+                    <div class="element__numero">1</div>
+                    <i class="fas fa-mobile-alt element__icon"></i>
+                    <div class="element__action">Choisissez un restaurant</div>
+                    
+                </div>
 
-            <div class="element">
-                <div class="element__numero">3</div>
-                <i class="fas fa-store element__icon"></i>
-                <div class="element__action">Dégustez au restaurant</div>
+                <div class="element">
+                    <div class="element__numero">2</div>
+                    <i class="fas fa-list element__icon"></i>
+                    <div class="element__action">Composez votre menu</div>
+                </div>
+
+                <div class="element">
+                    <div class="element__numero">3</div>
+                    <i class="fas fa-store element__icon"></i>
+                    <div class="element__action">Dégustez au restaurant</div>
+                </div>
+
             </div>
 
         </section>
 
-        <section id="section3_restaurants">
+        <section class="section3_restaurants">
 
             <h2>Restaurants</h2>
 
-            <div id="cartes_hébergement">
+            <div id="cartes_restaurants">
 
                 <div class="carte">
 
-                    <a href="#">
+                    <span class="carte__nouveau">Nouveau</span>
 
-                        <figure>
-                            <img src="images/restaurants/lapalettedugout.jpg" alt="lapalettedugout" />
-                            <figcaption>La palette du goût</figcaption>
-                            <p>Ménilmontant</p>
-                        </figure>
+                    <a href="menu_lapalettedugout.html">
 
-                        <div class="nouveau">
-                            <p>Nouveau</p>
-                        </div>
+                        <img src="images/restaurants/lapalettedugout.jpg" alt="lapalettedugout" />
 
-                        <i class="far fa-heart icon_heart"></i>
+                        <div class="info">
 
-                    </a>
+                            <div class="info__details">
 
-                </div>
+                                <h4>La palette du goût</h4>
+                                <p>Ménilmontant</p>
 
-
-                <div class="carte">
-
-                    <a href="#">
-
-                        <figure>
-                            <img src="images/restaurants/lanoteenchantee.jpg" alt="lanoteenchantee" />
-                            <figcaption>La note enchantée</figcaption>
-                            <p>Charonne</p>
-                        </figure>
-
-                        <div class="nouveau">
-                            <p>Nouveau</p>
-                        </div>
-
-                        <i class="far fa-heart icon_heart"></i>
+                            </div>
+    
+                            <i class="far fa-heart icon_heart"></i>
                         
+                        </div>
+
                     </a>
 
                 </div>
@@ -142,15 +127,26 @@
 
                 <div class="carte">
 
-                    <a href="#">
+                    <span class="carte__nouveau">Nouveau</span>
 
-                        <figure>
-                            <img src="images/restaurants/alafrancaise.jpg" alt="alafrancaise" />
-                            <figcaption>A la française</figcaption>
-                            <p>Cité Rouge</p>
-                        </figure>
+                    <a href="menu_lanoteenchantee.html">
 
-                        <i class="far fa-heart icon_heart"></i>
+                        
+                        <img src="images/restaurants/lanoteenchantee.jpg" alt="lanoteenchantee" />
+
+                        <div class="info">
+                            
+                            <div class="info__details">
+
+                                <h4>La note enchantée</h4>
+                                <p>Charonne</p>
+
+                            </div>
+
+                            <i class="far fa-heart icon_heart"></i>
+                        
+                        </div>
+
                     </a>
 
                 </div>
@@ -158,15 +154,47 @@
 
                 <div class="carte">
 
-                    <a href="#">
+                    <a href="menu_alafrancaise.html">
+                        
+                        <img src="images/restaurants/alafrancaise.jpg" alt="alafrancaise" />
 
-                        <figure>
-                            <img src="images/restaurants/ledelicedessens.jpg" alt="ledelicedessens" />
-                            <figcaption>Le délice des sens</figcaption>
-                            <p>Folie-Méricourt</p>
-                        </figure>
+                        <div class="info">
 
-                        <i class="far fa-heart icon_heart"></i>
+                            <div class="info__details">
+
+                                <h4>A la française</h4>
+                                <p>Cité Rouge</p>
+
+                            </div>
+
+                            <i class="far fa-heart icon_heart"></i>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <div class="carte">
+
+                    <a href="menu_ledelicedessens.html">
+
+                        <img src="images/restaurants/ledelicedessens.jpg" alt="ledelicedessens" />
+                            
+                        <div class="info">
+
+                            <div class="info__details">
+
+                                <h4>Le délice des sens</h4>
+                                <p>Folie-Méricourt</p>
+
+                            </div>
+
+                            <i class="far fa-heart icon_heart"></i>
+
+                        </div>
+
                     </a>
 
                 </div>
@@ -177,9 +205,7 @@
 
         <footer>
 
-            <a href="#">
-                <img src="images/logo/ohmyfood@2x.svg" alt="logo_footer" />
-            </a>
+            <h1>ohmyfood</h1>
 
             <div class="footer__actions">
 

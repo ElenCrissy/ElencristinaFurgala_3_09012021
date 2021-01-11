@@ -1,3 +1,10 @@
-/*.button{
-    background-color: $colour-primary;
-}*/
+.button{
+    border: none;
+    outline: none;
+    background: $background-button;
+    padding: 20px;
+    border-radius: 50px;
+    &:hover{
+    
+    }
+}

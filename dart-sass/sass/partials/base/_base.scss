@@ -1,15 +1,25 @@
 body{
-    font-family: 'roboto', sans-serif;
+    font-family: 'robotoregular', sans-serif;
     width: 95%;
     margin: auto;
-
+    font-size: large;
 }
 
-body img{
+h2{
+    font-weight: bold;
+}
+
+img{
     max-width: 100%;
 }
 
+a{
+    text-decoration: none;
+}
+
 .button {
+    color: white;
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-weight: bolder;
+    font-size: large;
 }

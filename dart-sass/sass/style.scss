@@ -1,6 +1,18 @@
+@import "partials/utils/variables"; //variables, fonctions, mixins et %placeholders pour extensions//
+@import "partials/utils/functions";
+@import "partials/utils/mixins";
+
 @import "partials/base/base"; //fondation du site//
+
 @import "partials/components/components"; //blocs BEM indépendants type bouton//
-@import "partials/layouts/layouts"; //blocs BEM//
-@import "partials/pages/pages"; //pas sûre si utile//
-@import "partials/utils/utils"; //variables, fonctions, mixins et %placeholders pour extensions//
+
+@import "partials/layouts/header"; //blocs BEM//
+@import "partials/layouts/footer";
+@import "partials/layouts/section1_localisation";
+@import "partials/layouts/section2_fonctionnement";
+@import "partials/layouts/section3_restaurants";
+
+
+@import "partials/pages/pages";
+
 

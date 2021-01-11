@@ -1,0 +1,19 @@
+footer{
+    margin-top: $margin-defaut;
+    background-color: $colour-darkgrey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    & a{
+        color: white;
+    }
+    & i{
+        padding-right: 3px;
+    }
+    & h1{
+        font-size: 1em;
+        font-family: 'shrikhand', 'robotoregular', sans-serif;
+    }
+}
