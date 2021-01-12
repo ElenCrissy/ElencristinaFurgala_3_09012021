@@ -1,0 +1,44 @@
+.section2_fonctionnement{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    & h2{
+        text-align: center;
+    }
+}
+
+.etapes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.element{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    background-color: $colour-lightgrey;
+    padding: 25px;
+    border-radius: 25px;
+    &:hover{
+        box-shadow: $box-shadow-box;
+    }
+    &__action{
+        font-weight: bold;
+    }
+    position: relative;
+    &__numero{
+        position: absolute;
+        left: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        color: white;
+        background-color: $colour-primary;
+        padding: 5px;
+        border-radius: 100%;
+    }
+}

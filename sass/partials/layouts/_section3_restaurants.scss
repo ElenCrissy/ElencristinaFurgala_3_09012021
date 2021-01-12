@@ -1,0 +1,62 @@
+.section3_restaurants{
+    padding: 2%;
+    background-color: $colour-lightgrey;
+    & h2{
+        text-align: center;
+    }
+    & #cartes_restaurants{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        height: 80%;
+    }
+}
+
+.carte{
+    width: 40%;
+    height: 14em;
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom: $margin-defaut;
+    position: relative;
+    &__nouveau{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border-radius: 3px;
+        color: darken($colour-tertiary, 35%);
+        background-color: $colour-tertiary;
+        padding: 7px;
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+}
+
+img{
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    &__details{
+        margin: 10px 0 5px 20px;
+    }
+    & h4{
+        margin: 0;
+    }
+    & p{
+        margin-top: 0;
+    }
+}
+
+.icon_heart{
+    margin-right: 20px;
+    font-size: 1.5em;
+}

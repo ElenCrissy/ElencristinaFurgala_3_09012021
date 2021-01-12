@@ -1,5 +1,5 @@
 body {
-  font-family: "robotoregular", sans-serif;
+  font-family: "roboto", sans-serif;
   width: 95%;
   margin: auto;
   font-size: large;
@@ -25,27 +25,33 @@ a {
 }
 
 .button {
+  margin-bottom: 30px;
   border: none;
   outline: none;
   background: linear-gradient(#FF79DA, #9356DC);
   padding: 20px;
   border-radius: 50px;
+  font-weight: normal;
 }
+.button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 0px 5px grey;
+}
+
 header {
   width: 100%;
   text-align: center;
   margin-top: 5vh;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 header img {
   width: auto;
 }
 
 footer {
-  margin-top: 20px;
   background-color: #353535;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
   color: white;
@@ -57,8 +63,12 @@ footer i {
   padding-right: 3px;
 }
 footer h1 {
-  font-size: 1em;
-  font-family: "shrikhand", "robotoregular", sans-serif;
+  font-size: 1.5em;
+  font-family: "shrikhand", "roboto", sans-serif;
+}
+
+.footer__action {
+  line-height: 3em;
 }
 
 .section1_localisation {
@@ -66,17 +76,34 @@ footer h1 {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-bottom: 20px;
-  background-color: #EAEAEA;
+  background: linear-gradient(#cfcfcf 0.5%, #EAEAEA 2%, #EAEAEA);
 }
+.section1_localisation h2 {
+  margin: 40px 0 0 0;
+  font-weight: bold;
+}
+
 .section1_localisation__presentation {
   width: 100%;
   padding-bottom: 30px;
   text-align: center;
   background-color: #F6F6F6;
 }
+.section1_localisation__presentation p {
+  font-weight: lighter;
+  margin: 10px 0 30px 0;
+}
+
+.location {
+  border: none;
+  background-color: #EAEAEA;
+  font-size: 1.2em;
+  text-align: center;
+  color: black;
+}
 
 .section2_fonctionnement {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -97,32 +124,54 @@ footer h1 {
   background-color: #F6F6F6;
   padding: 25px;
   border-radius: 25px;
+  position: relative;
+}
+.element:hover {
+  box-shadow: 0px 0px 5px grey;
+}
+.element__action {
+  font-weight: bold;
+}
+.element__numero {
+  position: absolute;
+  left: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: white;
+  background-color: #9356DC;
+  padding: 5px;
+  border-radius: 100%;
 }
 
 .section3_restaurants {
+  padding: 2%;
   background-color: #F6F6F6;
 }
 .section3_restaurants h2 {
   text-align: center;
 }
 .section3_restaurants #cartes_restaurants {
+  margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  height: 80%;
 }
 
 .carte {
-  width: 35%;
-  height: 300px;
+  width: 40%;
+  height: 14em;
   background-color: white;
   border-radius: 25px;
-  border-radius: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
 }
 .carte__nouveau {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 20px;
   border-radius: 3px;
   color: #2c9c81;
@@ -146,21 +195,18 @@ img {
   justify-content: space-between;
 }
 .info__details {
-  margin: 10px 0 5px 10px;
+  margin: 10px 0 5px 20px;
 }
 .info h4 {
   margin: 0;
 }
 .info p {
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .icon_heart {
-  display: flex;
-  align-items: center;
   margin-right: 20px;
   font-size: 1.5em;
-  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
