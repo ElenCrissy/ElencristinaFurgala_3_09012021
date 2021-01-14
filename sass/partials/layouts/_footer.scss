@@ -7,13 +7,14 @@ footer{
     color: white;
     & a{
         color: white;
+        text-align: center;
     }
     & i{
         padding-right: 3px;
     }
-    & h1{
-        font-size: 1.5em;
-        font-family: 'shrikhand', 'roboto', sans-serif;
+    & img{
+        filter: brightness(100);
+        width: 80%;
     }
 }
 

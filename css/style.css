@@ -15,6 +15,7 @@ img {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .button {
@@ -29,13 +30,14 @@ a {
   border: none;
   outline: none;
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 5px 15px #b7b7b7;
   padding: 20px;
   border-radius: 50px;
   font-weight: normal;
 }
 .button:hover {
   filter: brightness(1.1);
-  box-shadow: 0px 0px 5px grey;
+  box-shadow: 0px 5px 15px #9e9e9e;
 }
 
 header {
@@ -45,7 +47,7 @@ header {
   margin-bottom: 30px;
 }
 header img {
-  width: auto;
+  width: 30%;
 }
 
 footer {
@@ -58,13 +60,14 @@ footer {
 }
 footer a {
   color: white;
+  text-align: center;
 }
 footer i {
   padding-right: 3px;
 }
-footer h1 {
-  font-size: 1.5em;
-  font-family: "shrikhand", "roboto", sans-serif;
+footer img {
+  filter: brightness(100);
+  width: 80%;
 }
 
 .footer__action {
@@ -124,13 +127,11 @@ footer h1 {
   background-color: #F6F6F6;
   padding: 25px;
   border-radius: 25px;
+  box-shadow: 0px 5px 15px #dddddd;
   position: relative;
 }
 .element:hover {
-  box-shadow: 0px 0px 5px grey;
-}
-.element__action {
-  font-weight: bold;
+  background-color: #f4eefc;
 }
 .element__numero {
   position: absolute;
@@ -144,6 +145,16 @@ footer h1 {
   background-color: #9356DC;
   padding: 5px;
   border-radius: 100%;
+}
+.element__icon {
+  width: 20%;
+  text-align: center;
+  color: #818181;
+  font-size: 1.2em;
+}
+.element__action {
+  font-weight: bold;
+  width: 70%;
 }
 
 .section3_restaurants {
@@ -166,8 +177,12 @@ footer h1 {
   height: 14em;
   background-color: white;
   border-radius: 25px;
+  box-shadow: 0px 5px 15px #EAEAEA;
   margin-bottom: 30px;
   position: relative;
+}
+.carte:hover {
+  box-shadow: 0px 5px 15px #d1d1d1;
 }
 .carte__nouveau {
   position: absolute;
@@ -180,8 +195,7 @@ footer h1 {
   font-size: 0.8em;
   font-weight: bold;
 }
-
-img {
+.carte img {
   width: 100%;
   height: 70%;
   border-top-left-radius: 25px;
@@ -193,9 +207,10 @@ img {
 .info {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .info__details {
-  margin: 10px 0 5px 20px;
+  margin: 10px 0 0 20px;
 }
 .info h4 {
   margin: 0;
@@ -204,9 +219,73 @@ img {
   margin-top: 0;
 }
 
-.icon_heart {
+.heart {
   margin-right: 20px;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.heart:hover .heart__empty {
+  display: none;
+}
+
+.heart__filled {
+  background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.restaurant__photo {
+  width: 60%;
+  margin: auto;
+}
+
+.restaurant__menu {
+  background-color: #F6F6F6;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 20px 30px;
+}
+.restaurant__menu > .nom_restaurant {
+  position: relative;
+  font-family: shrikhand, roboto, sans-serif;
+}
+.restaurant__menu > .commande {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu h3 {
+  font-family: roboto, sans-serif;
+  font-weight: lighter;
+  font-size: 1.3em;
+}
+.menu a {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 5px 15px #EAEAEA;
+}
+.menu a:hover {
+  box-shadow: 0px 5px 15px #d1d1d1;
+}
+.menu .etape {
+  width: 32%;
+}
+
+.choix {
+  background-color: white;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+.choix__transition_selection {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

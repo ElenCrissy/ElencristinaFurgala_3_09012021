@@ -2,12 +2,13 @@
     margin-bottom: $margin-defaut;
     border: none;
     outline: none;
-    background: $background-button;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    box-shadow: $box-shadow-box darken($colour-mediumgrey, 20%);
     padding: 20px;
     border-radius: 50px;
     font-weight: normal;
     &:hover{
         filter: brightness(1.1);
-        box-shadow: $box-shadow-box;
+        box-shadow: $box-shadow-box darken($colour-mediumgrey, 30%);
     }
 }

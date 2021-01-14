@@ -1,0 +1,6 @@
+// icon heart__filled
+@mixin heart__filled{
+    background: -webkit-linear-gradient(45deg, $colour-secondary, $colour-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

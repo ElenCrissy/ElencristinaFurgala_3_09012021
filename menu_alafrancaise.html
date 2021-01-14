@@ -36,97 +36,81 @@
 
         </header>
 
-        <section class="photo">
+        <section class="restaurant">
 
-            <img src="images/restaurants/alafrancaise.jpg" alt="alafrancaise" />
+            <div class="restaurant__photo">
 
-        </section>
-
-        <section id="menu">
-
-            <div class="nom_restaurant">
-
-                <h1>A la française</h1>
-                
-                <i class="far fa-heart icon_heart"></i>
+                <img src="images/restaurants/alafrancaise.jpg" alt="alafrancaise" />
 
             </div>
 
-            <div class="menu">
+            <div class="restaurant__menu">
 
-                <div class="menu__entrees">
+                <div class="nom_restaurant">
 
-                    <h3>Entrées</h3>
+                    <h1>À la française</h1>
+                    
+                    <div class="heart">
 
-                    <div class="entree">
-
-                        <a href="#" class="selection">
-
-                            <span>Tarte de poulpe acidulée</span>
-                            <br />Aux zestes d'oranges
-
-                            <div class="prix">25€</div>
-
-                            <div class="transition_selection">
-                                <i class="fas fa-check-circle icon_check"></i>
-                            </div>
-
-                        </a>
-
-                    </div>
-
-                    <div class="entree">
-
-                        <a href="#" class="selection">
-
-                            <span>Velouté de légumes d'antan</span>
-                            <br />Carotte, panais, topinambour
-
-                            <div class="prix">35€</div>
-
-                            <div class="transition_selection">
-                                <i class="fas fa-check-circle icon_check"></i>
-                            </div>
-
-                        </a>
-
-                    </div>
-
-                    <div class="entree">
-
-                        <a href="#" class="selection">
-
-                            <span>Soupe à l'oignon</span>
-                            <br />Revisitée
-
-                            <div class="prix">20€</div>
-
-                            <div class="transition_selection">
-                                <i class="fas fa-check-circle icon_check"></i>
-                            </div>
-
-                        </a>
+                        <i class="far fa-heart heart__empty"></i>
+                        <i class="fas fa-heart heart__filled"></i>
 
                     </div>
 
                 </div>
 
+                <div class="menu">
 
+                    <div class="menu__entrees etape">
 
-                <div class="menu__plats">
+                        <h3>ENTRÉES</h3>
 
-                    <h3>Plats</h3>
-                    
-                    <div class="plat">
+                        <a href="#" class="choix">
 
-                        <a href="#" class="selection">
+                            <div class="choix__details">
 
-                            <span>Coquilles Saint-Jacques</span>
-                            <br />Accompagnées d'une purée de panais
+                                <h4>Tarte de poulpe acidulée</h4>
+                                <p>Aux zestes d'oranges</p>
 
-                            <div class="prix">40€</div>
+                            </div>
 
-                            <div class="transition_selection">
+                            <div class="choix__prix">25€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Velouté de légumes d'antan</h4>
+                                <p>Carotte, panais, topinambour</p>
+                                
+                            </div>
+
+                            <div class="choix__prix">35€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="choix">
+
+                            <div class="choix__details"> 
+
+                                <h4>Soupe à l'oignon</h4>
+                                <p>Revisitée</p>
+
+                            </div>
+
+                            <div class="choix__prix">20€</div>
+
+                            <div class="choix__transition_selection">
                                 <i class="fas fa-check-circle icon_check"></i>
                             </div>
 
@@ -134,91 +118,115 @@
 
                     </div>
 
-                    <div class="plat">
 
-                        <a href="#" class="selection">
+                    <div class="menu__plats etape">
 
-                            <span>Magret de canard</span>
-                            <br />Et parmentier de pommes de terre
-
-                            <div class="prix">35€</div>
-
-                            <div class="transition_selection">
-                                <i class="fas fa-check-circle icon_check"></i>
-                            </div>
-
-                        </a>
-
-                    </div>
-
-                    <div class="plat">
-
-                        <a href="#" class="selection">
-
-                            <span>Pigeonneau d'Ille-et-Vilaine</span>
-                            <br />Sur son lit de gnocchis aux légumes
-
-                            <div class="prix">44€</div>
-
-                            <div class="transition_selection">
-                                <i class="fas fa-check-circle icon_check"></i>
-                            </div>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="menu__desserts">
-                   
-                    <h3>Desserts</h3>
-                    
-                    <div class="dessert">
-
-                        <a href="#" class="selection">
-
-                            <span>Pétales de violettes glacés</span>
-                            <br />Et purée de noisettes
-
-                            <div class="prix">18€</div>
-
-                            <div class="transition_selection">
-                                <i class="fas fa-check-circle icon_check"></i>
-                            </div>
-
-                        </a>
-
-                    </div>
-
-                    <div class="dessert">
-
-                        <a href="#" class="selection">
-
-                            <span>Fondant au chocolat</span>
-                            <br />Revisité
-
-                            <div class="prix">22€</div>
-
-                            <div class="transition_selection">
-                                <i class="fas fa-check-circle icon_check"></i>
-                            </div>
+                        <h3>PLATS</h3>
                         
+                        <a href="#" class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Coquilles Saint-Jacques</h4>
+                                <p>Accompagnées d'une purée de panais</p>
+
+                            </div>
+
+                            <div class="choix__prix">40€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Magret de canard</h4>
+                                <p>Et parmentier de pommes de terre</p>
+
+                            </div>
+
+                            <div class="choix__prix">35€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Pigeonneau d'Ille-et-Vilaine</h4>
+                                <p>Sur son lit de gnocchis aux légumes</p>
+                            
+                            </div>
+
+                            <div class="choix__prix">44€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
                         </a>
 
                     </div>
 
-                    <div class="dessert">
 
-                        <a href="#" class="selection">
+                    <div class="menu__desserts etape">
+                    
+                        <h3>DESSERTS</h3>
+                        
+                        <a href="#" class="choix">
 
-                            <span>Millefeuille croustillant</span>
-                            <br />Myrtilles et pâte d'amande
+                            <div class="choix__details">  
 
-                            <div class="prix">23€</div>
+                                <h4>Pétales de violettes glacés</h4>
+                                <p>Et purée de noisettes</p>
 
-                            <div class="transition_selection">
+                            </div>
+
+                            <div class="choix__prix">18€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Fondant au chocolat</h4>
+                                <p>Revisité</p>
+
+                            </div>
+
+                            <div class="choix__prix">22€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+                            
+                        </a>
+
+                        <a href="#" class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Millefeuille croustillant</h4>
+                                <p>Myrtilles et pâte d'amande</p>
+
+                            </div>
+
+                            <div class="choix__prix">23€</div>
+
+                            <div class="choix__transition_selection">
                                 <i class="fas fa-check-circle icon_check"></i>
                             </div>
 
@@ -228,11 +236,11 @@
 
                 </div>
 
-            </div>
+                <div class="commande">
 
-            <div class="commande">
+                    <input type="button" value="Commander" class="button" />
 
-                <input type="button" value="Commander" class="button" />
+                </div>
 
             </div>
 
@@ -244,7 +252,7 @@
                 <img src="images/logo/ohmyfood@2x.svg" alt="logo_footer" />
             </a>
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     <i class="fas fa-utensils icon_footer"></i>
@@ -254,7 +262,7 @@
             </div>
 
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     <i class="fas fa-hands-helping icon_footer"></i>
@@ -264,7 +272,7 @@
             </div>
 
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     Mentions légales
@@ -273,7 +281,7 @@
             </div>
 
             
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     Contact

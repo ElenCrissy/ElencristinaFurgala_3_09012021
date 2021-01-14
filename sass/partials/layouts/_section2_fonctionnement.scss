@@ -21,11 +21,9 @@
     background-color: $colour-lightgrey;
     padding: 25px;
     border-radius: 25px;
+    box-shadow: $box-shadow-box darken($colour-mediumgrey, 5%);
     &:hover{
-        box-shadow: $box-shadow-box;
-    }
-    &__action{
-        font-weight: bold;
+        background-color: lighten($colour-primary, 36%);
     }
     position: relative;
     &__numero{
@@ -40,5 +38,15 @@
         background-color: $colour-primary;
         padding: 5px;
         border-radius: 100%;
+    }
+    &__icon{
+        width: 20%;
+        text-align: center;
+        color: $colour-icon-section2;
+        font-size: 1.2em;
+    }
+    &__action{
+        font-weight: bold;
+        width: 70%;
     }
 }
