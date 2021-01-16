@@ -30,64 +30,80 @@
         font-weight: lighter;
         font-size: 1.3em;
     }
-    & a{
-        display: block;
+    @include laptop{
+        height: 380px;
+        margin-bottom: 40px;
         display: flex;
-        justify-content: space-between;
-        background-color: white;
-        border-radius: 25px;
-        margin-bottom:$margin-defaut;
-        box-shadow: $box-shadow-box $colour-mediumgrey;
-        &:hover{
-            box-shadow: $box-shadow-hover;
-        }
+        justify-content: space-evenly;
     }
 }
 
-.etape h3{
-    &::after{
-        content: '';
-        background: $colour-tertiary;
-        display: flex;
-        flex-direction: column;
-        width: 55px;
-        height: 4px;
-        margin-top: 5px;
+.etape{
+    & h3{
+        &::after{
+            content: '';
+            background: $colour-tertiary;
+            display: flex;
+            flex-direction: column;
+            width: 55px;
+            height: 4px;
+            margin-top: 5px;
+        }
     }
+    @include laptop{
+        width: 32%;
+    }    
 }
 
 .choix{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom:$margin-defaut;
+    box-shadow: $box-shadow-box $colour-mediumgrey;
+    position: relative;
+    &:hover{
+        box-shadow: $box-shadow-hover;
+    }
+    @include laptop{
+        height: 20%;
+    }    
     &__infos{
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include laptop{
+            font-size: 0.8em;
+        }
     }
     @include details;
     &__details{
-        margin: 10px 0 0 20px;
+        margin-left: 20px;
+        padding: 10px 0 10px 0;
+        overflow: hidden;
     }
     &__prix{
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         padding: 4%;
         font-weight: bold;
         color: darken(darkgrey, 30%);
     }
     &__transition_selection{
         width: 15%;
+        height: 100%;
         border-bottom-right-radius: 25px;
         border-top-right-radius: 25px;
         background-color: $colour-tertiary;
         color: white;
         font-size: 1.2em;
-        vertical-align: middle;
         display: flex;
         justify-content: center;
         align-items: center;
-        display: none;
+        position: absolute;
+        right: -15%;
     }
 }
 
-.choix:hover + .choix__transition_selection{
-    display: content;
-}

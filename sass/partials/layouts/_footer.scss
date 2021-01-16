@@ -11,7 +11,15 @@ footer{
     }
     & img{
         filter: brightness(100);
-        width: 15%;
+        width: 30%;
+    }
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & img{
+            width: 100%;
+        }
     }
 }
 

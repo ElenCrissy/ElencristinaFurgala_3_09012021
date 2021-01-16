@@ -1,0 +1,45 @@
+// Transition sélection menu
+
+.choix{
+    overflow: hidden;
+    &:hover{
+        & > .choix__transition_selection{
+            transform: translateX(-100%);
+            .icon_check{
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+.choix__transition_selection{
+    transition: transform 500ms ease-in-out;
+    .icon_check{
+        transform: rotate(-320deg);
+        transition: transform 500ms ease-in-out;
+    }
+}
+
+// Keyframes animation menu
+
+$anim-dur: 2000ms;
+$numbars: 3;
+$anim-delay: $anim-dur / $numbars;
+
+
+
+.choix{
+    animation-name: animation_menu;
+    animation-duration: 2000ms;
+}
+
+@keyframes animation_menu{
+    from{
+        transform: translateY(+30%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

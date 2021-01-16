@@ -1,8 +1,12 @@
 body{
     font-family: 'roboto', sans-serif;
-    width: 95%;
+    font-size: 0.7em;
+    width: 100%;
     margin: auto;
     font-size: large;
+    @include tablet{
+        width: 95%;
+    }
 }
 
 h2{

@@ -4,7 +4,9 @@
 
 @import "partials/base/base"; //fondation du site//
 
-@import "partials/components/components"; //blocs BEM indépendants type bouton//
+@import "partials/components/button"; //blocs BEM indépendants type bouton//
+@import "partials/components/transitions";
+@import "partials/components/spinner";
 
 @import "partials/layouts/header"; //blocs BEM//
 @import "partials/layouts/footer";

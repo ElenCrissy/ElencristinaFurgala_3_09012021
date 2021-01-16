@@ -17,6 +17,7 @@
 }
 & p{
     margin-top: 0;
+    margin-bottom: 0;
 }
 }
 
@@ -28,21 +29,20 @@ $breakpoints:(
   desktop: 1200px,
 );
 
+@mixin tablet{
+  @media screen and (min-width: map-get($breakpoints, tablet)){
+    @content;
+  }
+}
+
 @mixin laptop{
   @media screen and (min-width: map-get($breakpoints, laptop)){
     @content;
   }
 }
 
-/*media queries
-TABLETTE
+// Transition shadow
 
-
-DESK
-
-
-#cartes restaurant
-flex-wrap: wrap;
-
-
-*/
+@mixin transition_shadow {
+  
+}
