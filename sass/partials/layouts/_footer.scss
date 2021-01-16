@@ -1,8 +1,5 @@
 footer{
     background-color: $colour-darkgrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
     color: white;
     & a{
@@ -14,10 +11,10 @@ footer{
     }
     & img{
         filter: brightness(100);
-        width: 80%;
+        width: 15%;
     }
 }
 
 .footer__action{
-    line-height: 3em;
+    line-height: 2em;
 }

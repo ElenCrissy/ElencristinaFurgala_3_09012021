@@ -1,3 +1,15 @@
+/*media queries
+TABLETTE
+
+
+DESK
+
+
+#cartes restaurant
+flex-wrap: wrap;
+
+
+*/
 body {
   font-family: "roboto", sans-serif;
   width: 95%;
@@ -44,7 +56,7 @@ header {
   width: 100%;
   text-align: center;
   margin-top: 5vh;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 header img {
   width: 30%;
@@ -52,9 +64,6 @@ header img {
 
 footer {
   background-color: #353535;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 20px;
   color: white;
 }
@@ -67,11 +76,11 @@ footer i {
 }
 footer img {
   filter: brightness(100);
-  width: 80%;
+  width: 15%;
 }
 
 .footer__action {
-  line-height: 3em;
+  line-height: 2em;
 }
 
 .section1_localisation {
@@ -83,7 +92,32 @@ footer img {
 }
 .section1_localisation h2 {
   margin: 40px 0 0 0;
+}
+
+.section1_localisation__recherche p {
+  display: flex;
+}
+.section1_localisation__recherche i {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+.section1_localisation__recherche .location {
+  width: 90%;
+  border: none;
+  background-color: #EAEAEA;
+  font-family: roboto, sans-serif;
   font-weight: bold;
+  font-size: large;
+  text-align: left;
+}
+.section1_localisation__recherche .location:focus {
+  outline: none;
+}
+.section1_localisation__recherche ::placeholder {
+  color: black;
 }
 
 .section1_localisation__presentation {
@@ -97,31 +131,37 @@ footer img {
   margin: 10px 0 30px 0;
 }
 
-.location {
-  border: none;
-  background-color: #EAEAEA;
-  font-size: 1.2em;
-  text-align: center;
-  color: black;
-}
-
 .section2_fonctionnement {
   margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
+  height: 300px;
 }
 .section2_fonctionnement h2 {
-  text-align: center;
+  margin-left: 4%;
+}
+@media screen and (min-width: 1075px) {
+  .section2_fonctionnement {
+    height: auto;
+  }
 }
 
 .etapes {
   width: 100%;
+  height: 90%;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1075px) {
+  .etapes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .element {
-  width: 25%;
+  width: 70%;
   display: flex;
   justify-content: center;
   background-color: #F6F6F6;
@@ -147,7 +187,7 @@ footer img {
   border-radius: 100%;
 }
 .element__icon {
-  width: 20%;
+  width: 25%;
   text-align: center;
   color: #818181;
   font-size: 1.2em;
@@ -156,25 +196,32 @@ footer img {
   font-weight: bold;
   width: 70%;
 }
+@media screen and (min-width: 1075px) {
+  .element {
+    width: 25%;
+  }
+}
 
 .section3_restaurants {
   padding: 2%;
   background-color: #F6F6F6;
 }
 .section3_restaurants h2 {
-  text-align: center;
+  margin-left: 4%;
 }
 .section3_restaurants #cartes_restaurants {
   margin-top: 30px;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   height: 80%;
 }
 
 .carte {
-  width: 40%;
-  height: 14em;
+  width: 95%;
+  height: 16em;
+  display: flex;
+  justify-content: center;
   background-color: white;
   border-radius: 25px;
   box-shadow: 0px 5px 15px #EAEAEA;
@@ -204,19 +251,29 @@ footer img {
   object-position: center;
 }
 
+.carte:hover ~ .carte__nouveau {
+  background-color: blue;
+}
+
 .info {
+  margin: 2%;
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 .info__details {
-  margin: 10px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .info h4 {
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 .info p {
   margin-top: 0;
+}
+.info__details {
+  margin: 0 0 0 20px;
 }
 
 .heart {
@@ -238,9 +295,34 @@ footer img {
   -webkit-text-fill-color: transparent;
 }
 
+.header_menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+  margin-bottom: 10px;
+  display: flex;
+}
+.header_menu a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_menu i {
+  width: 10%;
+  position: absolute;
+  left: 3vw;
+  font-size: 1.3em;
+}
+.header_menu img {
+  width: 40%;
+}
+
 .restaurant__photo {
-  width: 60%;
+  width: 100%;
   margin: auto;
+  position: relative;
 }
 
 .restaurant__menu {
@@ -250,17 +332,19 @@ footer img {
   padding: 20px 30px;
 }
 .restaurant__menu > .nom_restaurant {
-  position: relative;
   font-family: shrikhand, roboto, sans-serif;
+  position: relative;
 }
 .restaurant__menu > .commande {
   text-align: center;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
+.heart {
+  position: absolute;
+  top: 2px;
+  right: 10px;
 }
+
 .menu h3 {
   font-family: roboto, sans-serif;
   font-weight: lighter;
@@ -270,22 +354,67 @@ footer img {
   display: block;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  border-radius: 25px;
+  margin-bottom: 30px;
   box-shadow: 0px 5px 15px #EAEAEA;
 }
 .menu a:hover {
   box-shadow: 0px 5px 15px #d1d1d1;
 }
-.menu .etape {
-  width: 32%;
+
+.etape h3::after {
+  content: "";
+  background: #99E2D0;
+  display: flex;
+  flex-direction: column;
+  width: 55px;
+  height: 4px;
+  margin-top: 5px;
 }
 
-.choix {
-  background-color: white;
-  border-radius: 25px;
-  margin-bottom: 30px;
+.choix__infos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.choix__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.choix h4 {
+  margin: 0 0 5px 0;
+}
+.choix p {
+  margin-top: 0;
+}
+.choix__details {
+  margin: 10px 0 0 20px;
+}
+.choix__prix {
+  display: flex;
+  align-items: flex-end;
+  padding: 4%;
+  font-weight: bold;
+  color: #5d5d5d;
 }
 .choix__transition_selection {
+  width: 15%;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 1.2em;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: none;
+}
+
+.choix:hover + .choix__transition_selection {
+  display: content;
 }
 
 /*# sourceMappingURL=style.css.map */

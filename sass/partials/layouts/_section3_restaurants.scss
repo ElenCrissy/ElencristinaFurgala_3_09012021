@@ -2,20 +2,22 @@
     padding: 2%;
     background-color: $colour-lightgrey;
     & h2{
-        text-align: center;
+        margin-left: $margin-h2;
     }
     & #cartes_restaurants{
         margin-top: 30px;
         display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         height: 80%;
     }
 }
 
 .carte{
-    width: 40%;
-    height: 14em;
+    width: 95%;
+    height: 16em;
+    display: flex;
+    justify-content: center;
     background-color: white;
     border-radius: 25px;
     box-shadow: $box-shadow-box $colour-mediumgrey;
@@ -45,18 +47,18 @@
     }
 }
 
+.carte:hover ~ .carte__nouveau{
+    background-color: blue;
+}
+
 .info{
+    margin: 2%;
     display: flex;
     justify-content: space-between;
     position: relative;
+    @include details;
     &__details{
-        margin: 10px 0 0 20px;
-    }
-    & h4{
-        margin: 0;
-    }
-    & p{
-        margin-top: 0;
+        margin: 0 0 0 20px;
     }
 }
 

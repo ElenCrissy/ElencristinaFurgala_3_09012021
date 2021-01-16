@@ -4,3 +4,45 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+// class __details
+@mixin details{
+  &__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+& h4{
+    margin: 0 0 5px 0;
+}
+& p{
+    margin-top: 0;
+}
+}
+
+// Responsive
+
+$breakpoints:(
+  tablet: 768px,
+  laptop: 1075px,
+  desktop: 1200px,
+);
+
+@mixin laptop{
+  @media screen and (min-width: map-get($breakpoints, laptop)){
+    @content;
+  }
+}
+
+/*media queries
+TABLETTE
+
+
+DESK
+
+
+#cartes restaurant
+flex-wrap: wrap;
+
+
+*/
