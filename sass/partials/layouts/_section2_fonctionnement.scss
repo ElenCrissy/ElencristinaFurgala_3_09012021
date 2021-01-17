@@ -58,6 +58,9 @@
         font-weight: bold;
         width: 70%;
     }
+    @include tablet{
+        width: 50%;
+    }
     @include laptop{
         width: 25%;
     }

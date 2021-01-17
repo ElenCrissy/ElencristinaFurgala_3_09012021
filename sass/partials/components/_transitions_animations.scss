@@ -1,0 +1,65 @@
+// Page Menu transition_selection
+
+.choix{
+    overflow: hidden;
+    &:hover{
+        & > .choix__transition_selection{
+            transform: translateX(-100%);
+            .icon_check{
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+.choix__transition_selection{
+    transition: transform 500ms ease-in-out;
+    .icon_check{
+        transform: rotate(-320deg);
+        transition: transform 500ms ease-in-out;
+    }
+}
+
+// Page Menu keyframes animation menus
+
+$anim-dur: 1s;
+$numbars: 3;
+$anim-delay: $anim-dur / $numbars;
+
+.etape{
+    animation-name: anim-menu $anim-dur;
+    @for $i from 1 to $numbars{
+        &--#{$i}{
+            animation-delay: $anim-delay * $i;
+        }
+    }
+}
+
+@keyframes anim-menu{
+    from{
+        transform: translateY(+30%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// Page menu animation photo media query laptop
+
+.restaurant__photo img{
+    @include laptop{
+        animation: anim-photo 1s 0.5s both;
+    }
+}
+
+@keyframes anim-photo{
+    from{
+        transform: perspective(150px) scaleZ(-2) translateZ(0rem);
+    }
+    to{
+        transform: perspective(150px) scaleZ(1.5) translateZ(.1rem);
+        box-shadow: $box-shadow-box lighten($colour-darkgrey, 30%);
+    }
+}

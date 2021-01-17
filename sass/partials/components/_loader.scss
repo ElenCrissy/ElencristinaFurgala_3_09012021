@@ -1,0 +1,54 @@
+.loader{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    &__spinner{
+        border-radius: 50px;
+        border: 6px solid $colour-tertiary;
+        &:after{
+            content:"";
+            position: absolute;
+            top: -6px;
+            bottom: -6px;
+            left: -6px;
+            right: -6px;
+            border-radius: 50px;
+            border-top: 6px solid transparent;
+            border-top-color: darken($colour-tertiary, 30%);
+        }
+    }
+}
+
+
+
+
+    /*color: $colour-tertiary;
+    font-size: 5em;
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height : 100%;
+    width : 100%;
+    background-color: white;
+    & > .fas{
+        opacity: 0;
+        animation: spin 1s linear 3;
+    }
+
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+        opacity: 0.5;
+        z-index: 9999;
+    }
+    to{
+        transform: rotate(320deg);
+        opacity: 0.5;
+        z-index: 9999;
+    }
+}*/
