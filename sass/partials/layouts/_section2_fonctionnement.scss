@@ -33,6 +33,11 @@
     box-shadow: $box-shadow-box darken($colour-mediumgrey, 5%);
     &:hover{
         background-color: lighten($colour-primary, 36%);
+        @include transition_hover;
+        & .element__icon{
+            color: $colour-primary;
+            @include transition_hover;
+        }
     }
     position: relative;
     &__numero{

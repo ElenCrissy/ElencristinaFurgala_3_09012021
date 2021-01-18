@@ -1,3 +1,4 @@
+
 .loader{
     width: 50px;
     height: 50px;
@@ -5,50 +6,62 @@
     position: relative;
     &__spinner{
         border-radius: 50px;
-        border: 6px solid $colour-tertiary;
+        border: 6px solid transparent;
+        border-top-color: darken($colour-tertiary, 30%);
+        border-bottom-color: darken($colour-tertiary, 30%);
+        -webkit-animation: spin 1s linear 3;
+                animation: spin 1s linear 3;
         &:after{
             content:"";
             position: absolute;
-            top: -6px;
-            bottom: -6px;
-            left: -6px;
-            right: -6px;
+            top: 5px;
+            bottom: 5px;
+            left: 5px;
+            right: 5px;
             border-radius: 50px;
-            border-top: 6px solid transparent;
+            border: 6px solid transparent;
             border-top-color: darken($colour-tertiary, 30%);
+            border-bottom-color: darken($colour-tertiary, 30%);
+            opacity: 0.6;
+            -webkit-animation: spinreverse 1500ms linear 2;
+                    animation: spinreverse 1500ms linear 2;
+        }
+        &:before{
+            content:"";
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            border-radius: 50px;
+            border: 3px solid transparent;
+            border-top-color: darken($colour-tertiary, 40%);
+            border-bottom-color: darken($colour-tertiary, 40%);
+            opacity: 0.4;
+            -webkit-animation: spinreverse 3s linear;
+                    animation: spinreverse 3s linear;
         }
     }
 }
 
-
-
-
-    /*color: $colour-tertiary;
-    font-size: 5em;
-    position : fixed;
-    top : 0px;
-    left : 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height : 100%;
-    width : 100%;
-    background-color: white;
-    & > .fas{
-        opacity: 0;
-        animation: spin 1s linear 3;
-    }
-
+@-webkit-keyframes spin{
+    from{ -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
 
 @keyframes spin{
-    from{
-        transform: rotate(0deg);
-        opacity: 0.5;
-        z-index: 9999;
-    }
-    to{
-        transform: rotate(320deg);
-        opacity: 0.5;
-        z-index: 9999;
-    }
-}*/
+    from{ -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spinreverse{
+    from{ -webkit-transform: rotate(-360deg); transform: rotate(-360deg); }
+    to{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes spinreverse{
+    from{ -webkit-transform: rotate(-360deg); transform: rotate(-360deg); }
+    to{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+

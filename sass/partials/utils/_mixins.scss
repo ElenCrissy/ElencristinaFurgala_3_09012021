@@ -42,6 +42,6 @@ $breakpoints:(
 
 // Transition shadow
 
-@mixin transition_shadow {
-  
+@mixin transition_hover {
+  transition: 300ms ease-in-out;
 }

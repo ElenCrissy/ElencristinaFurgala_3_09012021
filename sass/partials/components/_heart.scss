@@ -1,0 +1,29 @@
+.heart{
+    margin-right: 20px;
+    font-size: 1.7em;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.fa-heart {
+    color:black;
+    border-radius: 50%;
+    padding:.2em;
+    &::before{
+        content: "";
+        font-weight: bold;
+        transition: color 1s ease-out;
+    }
+    &:hover{
+        color: red;
+        cursor: pointer;
+    }
+}
+
+
+.heart__filled{
+    @include heart__filled;
+}

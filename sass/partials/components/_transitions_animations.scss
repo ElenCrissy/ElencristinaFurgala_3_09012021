@@ -22,14 +22,14 @@
 
 // Page Menu keyframes animation menus
 
-$anim-dur: 1s;
+$anim-dur: 3s;
 $numbars: 3;
 $anim-delay: $anim-dur / $numbars;
 
 .etape{
-    animation-name: anim-menu $anim-dur;
-    @for $i from 1 to $numbars{
-        &--#{$i}{
+    animation: anim-menu $anim-dur;
+    @for $i from 1 to $numbars {
+        &--#{$i} {
             animation-delay: $anim-delay * $i;
         }
     }

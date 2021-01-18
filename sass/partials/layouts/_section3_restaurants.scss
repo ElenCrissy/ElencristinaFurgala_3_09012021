@@ -19,7 +19,7 @@
 }
 
 .carte{
-    width: 95%;
+    width: 90%;
     height: 16em;
     display: flex;
     justify-content: center;
@@ -29,6 +29,7 @@
     margin-bottom: $margin-defaut;
     &:hover{
         box-shadow: $box-shadow-hover;
+        @include transition_hover;
     }
     @include tablet{
         width: 45%;
@@ -55,6 +56,11 @@
     }
 }
 
+.carte:hover > .carte__nouveau{
+    box-shadow: 0 3px 10px $colour-darkgrey;
+    @include transition_hover;
+}
+
 .info{
     margin: 2%;
     display: flex;
@@ -64,31 +70,4 @@
     &__details{
         margin: 0 0 0 20px;
     }
-}
-
-a .heart:disabled{
-    pointer-events: none;
-    cursor: default;
-}
-
-.heart{
-    margin-right: 20px;
-    font-size: 1.7em;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    &__filled{
-        display: none;
-    }
-    &:hover{
-        .heart__empty{
-            display: none;
-        }
-    }
-}
-
-.heart__filled{
-    @include heart__filled;
 }

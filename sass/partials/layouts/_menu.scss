@@ -80,6 +80,7 @@
     position: relative;
     &:hover{
         box-shadow: $box-shadow-hover;
+        @include transition_hover;
     }
     @include laptop{
         height: 20%;

@@ -44,6 +44,8 @@ a {
 .button:hover {
   filter: brightness(1.1);
   box-shadow: 0px 5px 15px #9e9e9e;
+  transform: perspective(150px) translateZ(5px);
+  transition: transform 300ms ease-in;
 }
 
 .choix {
@@ -65,13 +67,13 @@ a {
 }
 
 .etape {
-  animation-name: anim-menu 1s;
+  animation: anim-menu 3s;
 }
 .etape--1 {
-  animation-delay: 0.3333333333s;
+  animation-delay: 1s;
 }
 .etape--2 {
-  animation-delay: 0.6666666667s;
+  animation-delay: 2s;
 }
 
 @keyframes anim-menu {
@@ -107,49 +109,114 @@ a {
 }
 .loader__spinner {
   border-radius: 50px;
-  border: 6px solid #99E2D0;
+  border: 6px solid transparent;
+  border-top-color: #32b091;
+  border-bottom-color: #32b091;
+  -webkit-animation: spin 1s linear 3;
+  animation: spin 1s linear 3;
 }
 .loader__spinner:after {
   content: "";
   position: absolute;
-  top: -6px;
-  bottom: -6px;
-  left: -6px;
-  right: -6px;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
   border-radius: 50px;
-  border-top: 6px solid transparent;
+  border: 6px solid transparent;
   border-top-color: #32b091;
+  border-bottom-color: #32b091;
+  opacity: 0.6;
+  -webkit-animation: spinreverse 1500ms linear 2;
+  animation: spinreverse 1500ms linear 2;
+}
+.loader__spinner:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  border-top-color: #278870;
+  border-bottom-color: #278870;
+  opacity: 0.4;
+  -webkit-animation: spinreverse 3s linear;
+  animation: spinreverse 3s linear;
 }
 
-/*color: $colour-tertiary;
-    font-size: 5em;
-    position : fixed;
-    top : 0px;
-    left : 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height : 100%;
-    width : 100%;
-    background-color: white;
-    & > .fas{
-        opacity: 0;
-        animation: spin 1s linear 3;
-    }
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinreverse {
+  from {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinreverse {
+  from {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.heart {
+  margin-right: 20px;
+  font-size: 1.7em;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
 
+.fa-heart {
+  color: black;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+.fa-heart::before {
+  content: "";
+  font-weight: bold;
+  transition: color 1s ease-out;
+}
+.fa-heart:hover {
+  color: red;
+  cursor: pointer;
+}
 
-@keyframes spin{
-    from{
-        transform: rotate(0deg);
-        opacity: 0.5;
-        z-index: 9999;
-    }
-    to{
-        transform: rotate(320deg);
-        opacity: 0.5;
-        z-index: 9999;
-    }
-}*/
+.heart__filled {
+  background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header {
   width: 100%;
   text-align: center;
@@ -280,6 +347,11 @@ footer img {
 }
 .element:hover {
   background-color: #f4eefc;
+  transition: 300ms ease-in-out;
+}
+.element:hover .element__icon {
+  color: #9356DC;
+  transition: 300ms ease-in-out;
 }
 .element__numero {
   position: absolute;
@@ -338,7 +410,7 @@ footer img {
 }
 
 .carte {
-  width: 95%;
+  width: 90%;
   height: 16em;
   display: flex;
   justify-content: center;
@@ -350,6 +422,7 @@ footer img {
 }
 .carte:hover {
   box-shadow: 0px 5px 15px #d1d1d1;
+  transition: 300ms ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .carte {
@@ -376,6 +449,11 @@ footer img {
   object-position: center;
 }
 
+.carte:hover > .carte__nouveau {
+  box-shadow: 0 3px 10px #353535;
+  transition: 300ms ease-in-out;
+}
+
 .info {
   margin: 2%;
   display: flex;
@@ -398,38 +476,11 @@ footer img {
   margin: 0 0 0 20px;
 }
 
-a .heart:disabled {
-  pointer-events: none;
-  cursor: default;
-}
-
-.heart {
-  margin-right: 20px;
-  font-size: 1.7em;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 15px;
-  right: 10px;
-}
-.heart__filled {
-  display: none;
-}
-.heart:hover .heart__empty {
-  display: none;
-}
-
-.heart__filled {
-  background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .header_menu {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 4vh;
+  margin-top: 30px;
   margin-bottom: 10px;
   display: flex;
 }
@@ -534,6 +585,7 @@ a .heart:disabled {
 }
 .choix:hover {
   box-shadow: 0px 5px 15px #d1d1d1;
+  transition: 300ms ease-in-out;
 }
 @media screen and (min-width: 1216px) {
   .choix {
