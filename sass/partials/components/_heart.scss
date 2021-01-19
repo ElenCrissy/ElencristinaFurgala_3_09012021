@@ -8,22 +8,29 @@
     right: 10px;
 }
 
-.fa-heart {
-    color:black;
-    border-radius: 50%;
-    padding:.2em;
-    &::before{
-        content: "";
-        font-weight: bold;
-        transition: color 1s ease-out;
-    }
-    &:hover{
-        color: red;
-        cursor: pointer;
-    }
-}
-
-
 .heart__filled{
     @include heart__filled;
+    display:none !important;
+}
+
+.heart{
+    &:hover{
+        & > .heart__empty{
+            display: none;
+        }
+        & > .heart__filled{
+            display: block !important;
+            opacity: 0;
+            animation: fadeIn-heart 900ms forwards;
+        }
+    }
+} 
+
+@keyframes fadeIn-heart{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

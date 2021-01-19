@@ -1,34 +1,31 @@
-// Page Menu transition_selection
+// Page menu animation photo media query laptop
 
-.choix{
-    overflow: hidden;
-    &:hover{
-        & > .choix__transition_selection{
-            transform: translateX(-100%);
-            .icon_check{
-                transform: rotate(0deg);
-            }
-        }
+.restaurant__photo img{
+    @include laptop{
+        animation: anim-photo 1s 0.5s both;
     }
 }
 
-.choix__transition_selection{
-    transition: transform 500ms ease-in-out;
-    .icon_check{
-        transform: rotate(-320deg);
-        transition: transform 500ms ease-in-out;
+@keyframes anim-photo{
+    from{
+        transform: perspective(150px) scaleZ(-2) translateZ(0rem);
+    }
+    to{
+        transform: perspective(150px) scaleZ(1.5) translateZ(.1rem);
+        box-shadow: $box-shadow-box lighten($colour-darkgrey, 30%);
     }
 }
 
-// Page Menu keyframes animation menus
+// Page Menu animation menus
 
 $anim-dur: 3s;
 $numbars: 3;
 $anim-delay: $anim-dur / $numbars;
 
 .etape{
-    animation: anim-menu $anim-dur;
-    @for $i from 1 to $numbars {
+    opacity: 0;
+    animation: anim-menu $anim-dur forwards;
+    @for $i from 1 through $numbars {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
         }
@@ -46,20 +43,25 @@ $anim-delay: $anim-dur / $numbars;
     }
 }
 
-// Page menu animation photo media query laptop
+// Page Menu transition_selection
 
-.restaurant__photo img{
-    @include laptop{
-        animation: anim-photo 1s 0.5s both;
+$transition_selection: transform 500ms ease-in-out;
+
+.choix{
+    &:hover{
+        & .choix__transition_selection{
+            transform: translateX(-100%);
+            .icon_check{
+                transform: rotate(0deg);
+            }
+        }
     }
 }
 
-@keyframes anim-photo{
-    from{
-        transform: perspective(150px) scaleZ(-2) translateZ(0rem);
-    }
-    to{
-        transform: perspective(150px) scaleZ(1.5) translateZ(.1rem);
-        box-shadow: $box-shadow-box lighten($colour-darkgrey, 30%);
+.choix__transition_selection{
+    transition: $transition_selection;
+    .icon_check{
+        transform: rotate(-320deg);
+        transition: $transition_selection;
     }
 }

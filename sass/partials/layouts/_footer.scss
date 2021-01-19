@@ -5,6 +5,9 @@ footer{
     & a{
         color: white;
         text-align: center;
+        &:hover{
+            color: lighten($colour-secondary, 10%);
+        }
     }
     & i{
         padding-right: 3px;

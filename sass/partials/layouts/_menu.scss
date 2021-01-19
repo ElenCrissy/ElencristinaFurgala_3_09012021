@@ -1,3 +1,10 @@
+.restaurant{
+    background-color: $colour-lightgrey;
+    @include laptop{
+        background-color: white;
+    }
+}
+
 .restaurant__photo{
     width: 100%;
     margin: auto;
@@ -22,7 +29,11 @@
     background-color: $colour-lightgrey;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
-    padding: 20px 30px; // à revoir
+    padding: 20px 30px;
+    transform: translateY(-50px);
+    @include laptop{
+        transform: none;
+    }
     & > .nom_restaurant{
         font-family: shrikhand, roboto, sans-serif;
         position: relative;
@@ -70,6 +81,7 @@
 }
 
 .choix{
+    width: 100%;
     display: block;
     display: flex;
     justify-content: space-between;
@@ -77,6 +89,7 @@
     border-radius: 25px;
     margin-bottom:$margin-defaut;
     box-shadow: $box-shadow-box $colour-mediumgrey;
+    overflow: hidden;
     position: relative;
     &:hover{
         box-shadow: $box-shadow-hover;
@@ -84,20 +97,14 @@
     }
     @include laptop{
         height: 20%;
+        font-size: 0.8em;
     }    
-    &__infos{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        @include laptop{
-            font-size: 0.8em;
-        }
-    }
     @include details;
     &__details{
         margin-left: 20px;
         padding: 10px 0 10px 0;
-        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
     }
     &__prix{
         display: flex;
