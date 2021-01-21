@@ -27,14 +27,18 @@
     border-radius: 25px;
     box-shadow: $box-shadow-box $colour-mediumgrey;
     margin-bottom: $margin-defaut;
+    position: relative;
     &:hover{
         box-shadow: $box-shadow-hover;
         @include transition_hover;
+        & > .carte__nouveau{
+            box-shadow: 0 3px 10px $colour-darkgrey;
+            @include transition_hover;
+        }
     }
     @include tablet{
         width: 45%;
     }
-    position: relative;
     &__nouveau{
         position: absolute;
         top: 15px;
@@ -54,11 +58,6 @@
         object-fit: cover;
         object-position: center;
     }
-}
-
-.carte:hover > .carte__nouveau{
-    box-shadow: 0 3px 10px $colour-darkgrey;
-    @include transition_hover;
 }
 
 .info{

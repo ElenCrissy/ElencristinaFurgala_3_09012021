@@ -43,28 +43,10 @@
     }
 }
 
-.heart{
-    position:absolute;
-    top: 2px;
-    right:10px;
-}
-
 .menu{
     & h3{
-        font-family: roboto, sans-serif;
         font-weight: lighter;
         font-size: 1.3em;
-    }
-    @include laptop{
-        height: 380px;
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: space-evenly;
-    }
-}
-
-.etape{
-    & h3{
         &::after{
             content: '';
             background: $colour-tertiary;
@@ -76,8 +58,16 @@
         }
     }
     @include laptop{
-        width: 32%;
-    }    
+        height: 380px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    & .etape{
+        @include laptop{
+            width: 32%;
+        } 
+    }
 }
 
 .choix{
@@ -105,6 +95,8 @@
         padding: 10px 0 10px 0;
         text-overflow: ellipsis;
         display: flex;
+        overflow: hidden;
+        white-space: nowrap;
     }
     &__prix{
         display: flex;

@@ -4,9 +4,6 @@
     align-items: center;
     margin: auto;
     background: linear-gradient(#cfcfcf 0.5%, $colour-mediumgrey 2%,$colour-mediumgrey);
-    & h2{
-        margin: 40px 0 0 0;
-    }
 }
 
 .section1_localisation__recherche{
@@ -42,6 +39,9 @@
     padding-bottom: 30px;
     text-align: center;
     background-color: $colour-lightgrey;
+    & h2{
+        margin: 40px 0 0 0;
+    }
     & p{
         font-weight: lighter;
         margin: 10px 0 30px 0;

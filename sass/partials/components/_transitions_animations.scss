@@ -49,7 +49,16 @@ $transition_selection: transform 500ms ease-in-out;
 
 .choix{
     &:hover{
+        & .choix_details{
+            width: 70%;
+
+        }
+        & .choix__prix{
+            transform: translateX(-100%);
+            width: 15%;
+        }
         & .choix__transition_selection{
+            width: 15%;
             transform: translateX(-100%);
             .icon_check{
                 transform: rotate(0deg);
@@ -58,6 +67,9 @@ $transition_selection: transform 500ms ease-in-out;
     }
 }
 
+.choix__prix{
+    transition: $transition_selection;
+}
 .choix__transition_selection{
     transition: $transition_selection;
     .icon_check{

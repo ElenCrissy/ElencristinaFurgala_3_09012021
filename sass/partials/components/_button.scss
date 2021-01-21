@@ -10,7 +10,7 @@
     &:hover{
         filter: brightness(1.1);
         box-shadow: $box-shadow-box darken($colour-mediumgrey, 30%);
-        transform: perspective(150px) translateZ(5px);
+        transform: perspective(100px) translateZ(3px);
         transition: transform 300ms ease-in;
     }
 }

@@ -27,7 +27,7 @@
         border-top-color: darken($colour-tertiary, 30%);
         border-bottom-color: darken($colour-tertiary, 30%);
         animation: spin 1s linear 3;
-        &:after{
+        &::after{
             content:"";
             position: absolute;
             top: 5px;
@@ -41,7 +41,7 @@
             opacity: 0.6;
             animation: spinreverse 1500ms linear 2;
         }
-        &:before{
+        &::before{
             content:"";
             position: absolute;
             top: 15px;

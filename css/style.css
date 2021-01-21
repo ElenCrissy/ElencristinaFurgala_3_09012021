@@ -44,7 +44,7 @@ a {
 .button:hover {
   filter: brightness(1.1);
   box-shadow: 0px 5px 15px #9e9e9e;
-  transform: perspective(150px) translateZ(5px);
+  transform: perspective(100px) translateZ(3px);
   transition: transform 300ms ease-in;
 }
 
@@ -87,11 +87,23 @@ a {
     opacity: 1;
   }
 }
+.choix:hover .choix_details {
+  width: 70%;
+}
+.choix:hover .choix__prix {
+  transform: translateX(-100%);
+  width: 15%;
+}
 .choix:hover .choix__transition_selection {
+  width: 15%;
   transform: translateX(-100%);
 }
 .choix:hover .choix__transition_selection .icon_check {
   transform: rotate(0deg);
+}
+
+.choix__prix {
+  transition: transform 500ms ease-in-out;
 }
 
 .choix__transition_selection {
@@ -138,7 +150,7 @@ a {
   border-bottom-color: #32b091;
   animation: spin 1s linear 3;
 }
-.loader__spinner:after {
+.loader__spinner::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -152,7 +164,7 @@ a {
   opacity: 0.6;
   animation: spinreverse 1500ms linear 2;
 }
-.loader__spinner:before {
+.loader__spinner::before {
   content: "";
   position: absolute;
   top: 15px;
@@ -189,7 +201,7 @@ a {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 10px;
 }
 
@@ -268,9 +280,6 @@ footer img {
   margin: auto;
   background: linear-gradient(#cfcfcf 0.5%, #EAEAEA 2%, #EAEAEA);
 }
-.section1_localisation h2 {
-  margin: 40px 0 0 0;
-}
 
 .section1_localisation__recherche p {
   display: flex;
@@ -303,6 +312,9 @@ footer img {
   padding-bottom: 30px;
   text-align: center;
   background-color: #F6F6F6;
+}
+.section1_localisation__presentation h2 {
+  margin: 40px 0 0 0;
 }
 .section1_localisation__presentation p {
   font-weight: lighter;
@@ -427,6 +439,10 @@ footer img {
   box-shadow: 0px 5px 15px #d1d1d1;
   transition: 300ms ease-in-out;
 }
+.carte:hover > .carte__nouveau {
+  box-shadow: 0 3px 10px #353535;
+  transition: 300ms ease-in-out;
+}
 @media screen and (min-width: 768px) {
   .carte {
     width: 45%;
@@ -452,11 +468,6 @@ footer img {
   object-position: center;
 }
 
-.carte:hover > .carte__nouveau {
-  box-shadow: 0 3px 10px #353535;
-  transition: 300ms ease-in-out;
-}
-
 .info {
   margin: 2%;
   display: flex;
@@ -470,10 +481,16 @@ footer img {
 }
 .info h4 {
   margin: 0 0 5px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .info p {
   margin-top: 0;
   margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .info__details {
   margin: 0 0 0 20px;
@@ -556,27 +573,11 @@ footer img {
   text-align: center;
 }
 
-.heart {
-  position: absolute;
-  top: 2px;
-  right: 10px;
-}
-
 .menu h3 {
-  font-family: roboto, sans-serif;
   font-weight: lighter;
   font-size: 1.3em;
 }
-@media screen and (min-width: 1216px) {
-  .menu {
-    height: 380px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-evenly;
-  }
-}
-
-.etape h3::after {
+.menu h3::after {
   content: "";
   background: #99E2D0;
   display: flex;
@@ -586,7 +587,15 @@ footer img {
   margin-top: 5px;
 }
 @media screen and (min-width: 1216px) {
-  .etape {
+  .menu {
+    height: 380px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1216px) {
+  .menu .etape {
     width: 32%;
   }
 }
@@ -620,16 +629,24 @@ footer img {
 }
 .choix h4 {
   margin: 0 0 5px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .choix p {
   margin-top: 0;
   margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .choix__details {
   margin-left: 20px;
   padding: 10px 0 10px 0;
   text-overflow: ellipsis;
   display: flex;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .choix__prix {
   display: flex;

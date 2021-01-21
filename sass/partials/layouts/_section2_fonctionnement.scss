@@ -31,6 +31,7 @@
     padding: 25px;
     border-radius: 25px;
     box-shadow: $box-shadow-box darken($colour-mediumgrey, 5%);
+    position: relative;
     &:hover{
         background-color: lighten($colour-primary, 36%);
         @include transition_hover;
@@ -39,7 +40,6 @@
             @include transition_hover;
         }
     }
-    position: relative;
     &__numero{
         position: absolute;
         left: -12px;
