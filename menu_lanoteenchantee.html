@@ -13,6 +13,9 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
         
         <title>Oh my food! - La note enchantée</title>
         
@@ -20,10 +23,10 @@
 
     <body>
 
-        <header>
+        <header class="header_menu">
             
             
-            <a href="#" id="logo">
+            <a href="index.html" id="logo">
 
                 <i class="fas fa-arrow-left icon_header"></i>
 
@@ -33,180 +36,228 @@
 
         </header>
 
-        <section class="photo">
+        <section class="restaurant">
 
-            <img src="images/restaurants/lanoteenchantee.jpg" alt="lanoteenchantee" />
+            <div class="restaurant__photo">
 
-        </section>
-
-        <section id="menu">
-
-            <div class="nom_restaurant">
-
-                <h1>La note enchantée</h1>
-                
-                <i class="far fa-heart icon_heart"></i>
+                <img src="images/restaurants/lanoteenchantee.jpg" alt="lanoteenchantee" class="img__verticale img--perspective150px"/>
 
             </div>
 
-            <div class="menu">
+            <div class="restaurant__menu">
 
-                <div class="menu__entrees">
+                <div class="nom_restaurant">
 
-                    <h3>Entrées</h3>
-
-                    <div class="entree">
-
-                        <span>Ravioles de foie gras</span>
-                        <br />Accompagnées de leur crème à la truffe
-
-                        <div class="prix">25€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="entree">
-
-                        <span>Caviar osciètre</span>
-                        <br />Sur blini à la farine de blé noir
-
-                        <div class="prix">35€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="entree">
-
-                        <span>Homard et espuma de carotte</span>
-                        <br />Mariné aux zestes d'orange
-
-                        <div class="prix">20€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="entree">
-
-                        <span>Foie gras de canard cuit entier</span>
-                        <br />Confiture de figue et pain toasté
-
-                        <div class="prix">35€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="menu__plats">
-
-                    <h3>Plats</h3>
+                    <h1>La note enchantée</h1>
                     
-                    <div class="plat">
+                    <div class="heart">
 
-                        <span>Noix de coquilles Saint-Jacques</span>
-                        <br />Sur lit de purée de céleri-rave
-
-                        <div class="prix">40€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="plat">
-
-                        <span>Langoustine poêlée</span>
-                        <br />Purée de patate douce
-
-                        <div class="prix">35€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="plat">
-
-                        <span>Mijoté de queue de boeuf</span>
-                        <br />Et riz sauvage aux zestes de citron
-
-                        <div class="prix">44€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
+                        <i class="far fa-heart heart__empty"></i>
+                        <i class="fas fa-heart heart__filled"></i>
 
                     </div>
 
                 </div>
 
+                <div class="menu">
 
-                <div class="menu__desserts">
-                   
-                    <h3>Desserts</h3>
+                    <div class="etape etape--1">
+
+                        <h3>ENTRÉES</h3>
+
+                        <div class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Ravioles de foie gras</h4>
+                                <p>Accompagnées de leur crème à la truffe</p>
+
+                            </div>
+
+                            <div class="choix__prix">25€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Caviar osciètre</h4>
+                                <p>Sur blini à la farine de blé noir</p>
+                                
+                            </div>
+
+                            <div class="choix__prix">35€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+                        
+                            <div class="choix__details"> 
+
+                                <h4>Homard et espuma de carottes</h4>
+                                <p>Mariné aux zests d'orange</p>
+
+                            </div>
+
+                            <div class="choix__prix">20€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+                        
+                            <div class="choix__details"> 
+
+                                <h4>Foie gras de canard cuit entier</h4>
+                                <p>Confiture de figue et pain toasté</p>
+
+                            </div>
+
+                            <div class="choix__prix">35€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="etape etape--2">
+
+                        <h3>PLATS</h3>
+                        
+                        <div class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Noix de coquilles Saint-Jacques</h4>
+                                <p>Sur lit de purée de céleri-rave</p>
+
+                            </div>
+
+                            <div class="choix__prix">40€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Langoustine poêlée</h4>
+                                <p>Purée de patate douce</p>
+
+                            </div>
+
+                            <div class="choix__prix">35€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Mijoté de queue de boeuf</h4>
+                                <p>Et riz sauvage aux zests de citron</p>
+                            
+                            </div>
+
+                            <div class="choix__prix">44€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="etape etape--3">
                     
-                    <div class="dessert">
+                        <h3>DESSERTS</h3>
+                        
+                        <div class="choix">
 
-                        <span>Macaron noisette et chocolat</span>
-                        <br />Glace au caramel brun et sel de Guérande
+                            <div class="choix__details">  
 
-                        <div class="prix">18€</div>
+                                <h4>Macaron noisette et chocolat</h4>
+                                <p>Glace au caramel brun et sel de Guérande</p>
 
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                            <div class="choix__prix">18€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="choix">
 
-                    <div class="dessert">
+                            <div class="choix__details">  
 
-                        <span>Baba au rhum revisité</span>
-                        <br />Avec son coulis de citron
+                                <h4>Baba au rhum revisité</h4>
+                                <p>Avec son coulis de citron</p>
 
-                        <div class="prix">22€</div>
+                            </div>
 
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
+                            <div class="choix__prix">22€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+                            
                         </div>
 
-                    </div>
+                        <div class="choix">
 
-                    <div class="dessert">
+                            <div class="choix__details">  
 
-                        <span>Tarte au citron meringuée</span>
-                        <br />Destructurée
+                                <h4>Tarte au citron meringuée</h4>
+                                <p>Destructurée</p>
 
-                        <div class="prix">22€</div>
+                            </div>
 
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
+                            <div class="choix__prix">23€</div>
+                                
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
 
-            </div>
+                <div class="commande">
 
-            <div class="commande">
+                    <input type="button" value="Commander" class="button button__wider" />
 
-                <input type="button" value="Commander" class="button" />
+                </div>
 
             </div>
 
@@ -218,7 +269,7 @@
                 <img src="images/logo/ohmyfood@2x.svg" alt="logo_footer" />
             </a>
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     <i class="fas fa-utensils icon_footer"></i>
@@ -228,7 +279,7 @@
             </div>
 
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     <i class="fas fa-hands-helping icon_footer"></i>
@@ -238,7 +289,7 @@
             </div>
 
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     Mentions légales
@@ -247,7 +298,7 @@
             </div>
 
             
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     Contact

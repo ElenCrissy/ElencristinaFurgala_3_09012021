@@ -13,4 +13,7 @@
         transform: perspective(100px) translateZ(3px);
         transition: transform 300ms ease-in;
     }
+    &__wider{
+        width: 220px;
+    }
 }

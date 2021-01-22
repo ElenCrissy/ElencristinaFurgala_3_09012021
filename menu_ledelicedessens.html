@@ -13,6 +13,9 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
         
         <title>Oh my food! - Le délice des sens</title>
         
@@ -20,10 +23,10 @@
 
     <body>
 
-        <header>
+        <header class="header_menu">
             
             
-            <a href="#" id="logo">
+            <a href="index.html" id="logo">
 
                 <i class="fas fa-arrow-left icon_header"></i>
 
@@ -33,167 +36,211 @@
 
         </header>
 
-        <section class="photo">
+        <section class="restaurant">
 
-            <img src="images/restaurants/ledelicedessens.jpg" alt="ledelicedessens" />
+            <div class="restaurant__photo">
 
-        </section>
-
-        <section id="menu">
-
-            <div class="nom_restaurant">
-
-                <h1>Le délice des sens</h1>
-                
-                <i class="far fa-heart icon_heart"></i>
+                <img src="images/restaurants/ledelicedessens.jpg" alt="ledelicedessens" class="img--perspective150px"/>
 
             </div>
 
-            <div class="menu">
+            <div class="restaurant__menu">
 
-                <div class="menu__entrees">
+                <div class="nom_restaurant">
 
-                    <h3>Entrées</h3>
-
-                    <div class="entree">
-
-                        <span>Tartare de thon</span>
-                        <br />Assaisonné au yuzu
-
-                        <div class="prix">25€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="entree">
-
-                        <span>Bouchée de homard croustillant</span>
-                        <br />Et sa farandole de petits légumes
-
-                        <div class="prix">35€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="entree">
-
-                        <span>Velouté de cèpes</span>
-                        <br />Aux truffes
-
-                        <div class="prix">20€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="menu__plats">
-
-                    <h3>Plats</h3>
+                    <h1>Le délice des sens</h1>
                     
-                    <div class="plat">
+                    <div class="heart">
 
-                        <span>Poulet rôti aux herbes de provence</span>
-                        <br />Et sa crème de truffe
-
-                        <div class="prix">40€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="plat">
-
-                        <span>Langouste rôtie</span>
-                        <br />Et ses légumes de saison
-
-                        <div class="prix">35€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="plat">
-
-                        <span>Côte de boeuf angus</span>
-                        <br />Et sa purée de panais
-
-                        <div class="prix">44€</div>
-
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
-                        </div>
+                        <i class="far fa-heart heart__empty"></i>
+                        <i class="fas fa-heart heart__filled"></i>
 
                     </div>
 
                 </div>
 
+                <div class="menu">
 
-                <div class="menu__desserts">
-                   
-                    <h3>Desserts</h3>
+                    <div class="etape etape--1">
+
+                        <h3>ENTRÉES</h3>
+
+                        <div class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Tarte de thon</h4>
+                                <p>Assaisonné au yuzu</p>
+
+                            </div>
+
+                            <div class="choix__prix">25€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Bouchée de homard croustillant</h4>
+                                <p>Et sa farandole de petits légumes</p>
+                                
+                            </div>
+
+                            <div class="choix__prix">35€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+                        
+                            <div class="choix__details"> 
+
+                                <h4>Velouté de cèpes</h4>
+                                <p>Aux truffes</p>
+
+                            </div>
+
+                            <div class="choix__prix">20€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="etape etape--2">
+
+                        <h3>PLATS</h3>
+                        
+                        <div class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Poulet rôti aux herbes de provence</h4>
+                                <p>Et sa crème de truffe</p>
+
+                            </div>
+
+                            <div class="choix__prix">40€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+
+                            <div class="choix__details">
+
+                                <h4>Langouste rôtie</h4>
+                                <p>Et ses légumes de saison</p>
+
+                            </div>
+
+                            <div class="choix__prix">35€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="choix">
+
+                            <div class="choix__details">  
+
+                                <h4>Côte de boeuf angus</h4>
+                                <p>Et sa purée de panais</p>
+                            
+                            </div>
+
+                            <div class="choix__prix">44€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="etape etape--3">
                     
-                    <div class="dessert">
+                        <h3>DESSERTS</h3>
+                        
+                        <div class="choix">
 
-                        <span>Farandole de desserts</span>
-                        <br />Du chef
+                            <div class="choix__details">  
 
-                        <div class="prix">18€</div>
+                                <h4>Farandole de desserts</h4>
+                                <p>Du chef</p>
 
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
+                            <div class="choix__prix">18€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="choix">
 
-                    <div class="dessert">
+                            <div class="choix__details">  
 
-                        <span>Crème brûlée</span>
-                        <br />Revisitée
+                                <h4>Crème brûlée</h4>
+                                <p>Revisité</p>
 
-                        <div class="prix">22€</div>
+                            </div>
 
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
+                            <div class="choix__prix">22€</div>
+
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+                            
                         </div>
 
-                    </div>
+                        <div class="choix">
 
-                    <div class="dessert">
+                            <div class="choix__details">  
 
-                        <span>Tiramisu</span>
-                        <br />A la noisette
+                                <h4>Tiramisu</h4>
+                                <p>A la noisette</p>
 
-                        <div class="prix">23€</div>
+                            </div>
 
-                        <div class="selection">
-                            <i class="fas fa-check-circle icon_check"></i>
+                            <div class="choix__prix">23€</div>
+                                
+                            <div class="choix__transition_selection">
+                                <i class="fas fa-check-circle icon_check"></i>
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
 
-            </div>
+                <div class="commande">
 
-            <div class="commande">
+                    <input type="button" value="Commander" class="button button__wider" />
 
-                <input type="button" value="Commander" class="button" />
+                </div>
 
             </div>
 
@@ -205,7 +252,7 @@
                 <img src="images/logo/ohmyfood@2x.svg" alt="logo_footer" />
             </a>
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     <i class="fas fa-utensils icon_footer"></i>
@@ -215,7 +262,7 @@
             </div>
 
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     <i class="fas fa-hands-helping icon_footer"></i>
@@ -225,7 +272,7 @@
             </div>
 
 
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     Mentions légales
@@ -234,7 +281,7 @@
             </div>
 
             
-            <div class="footer__actions">
+            <div class="footer__action">
 
                 <a href="#">
                     Contact

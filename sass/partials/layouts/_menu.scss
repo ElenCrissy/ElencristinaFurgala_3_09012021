@@ -23,6 +23,9 @@
             }
         }
     }
+    & .img__verticale{
+        width: 30%;
+    }
 }
 
 .restaurant__menu{
@@ -86,13 +89,12 @@
         @include transition_hover;
     }
     @include laptop{
-        height: 20%;
         font-size: 0.8em;
     }    
     @include details;
     &__details{
         margin-left: 20px;
-        padding: 10px 0 10px 0;
+        padding: 10px 0;
         text-overflow: ellipsis;
         display: flex;
         overflow: hidden;
