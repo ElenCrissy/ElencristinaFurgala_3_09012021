@@ -96,6 +96,11 @@ a {
 .choix:hover > .choix__prix {
   transform: translateX(-100%);
 }
+@media screen and (min-width: 768px) {
+  .choix:hover > .choix__prix {
+    width: 8%;
+  }
+}
 .choix:hover > .choix__transition_selection {
   transform: translateX(-100%);
 }
@@ -104,15 +109,15 @@ a {
 }
 
 .choix__prix {
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease;
 }
 
 .choix__transition_selection {
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease;
 }
 .choix__transition_selection .icon_check {
   transform: rotate(-320deg);
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease;
 }
 
 .load {
@@ -644,6 +649,7 @@ footer img {
   text-overflow: ellipsis;
 }
 .choix__details {
+  width: 85%;
   margin-left: 20px;
   padding: 10px 0;
   text-overflow: ellipsis;
@@ -653,7 +659,8 @@ footer img {
 }
 .choix__prix {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
   padding: 4%;
   font-weight: bold;
   color: #5d5d5d;

@@ -93,6 +93,7 @@
     }    
     @include details;
     &__details{
+        width: 85%;
         margin-left: 20px;
         padding: 10px 0;
         text-overflow: ellipsis;
@@ -102,7 +103,8 @@
     }
     &__prix{
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        justify-content: center;
         padding: 4%;
         font-weight: bold;
         color: darken(darkgrey, 30%);

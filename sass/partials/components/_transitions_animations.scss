@@ -45,7 +45,7 @@ $anim-delay: $anim-dur / $numbars;
 
 // Page Menu transition_selection
 
-$transition_selection: transform 500ms ease-in-out;
+$transition_selection: transform 500ms ease;
 
 .choix{
     &:hover{
@@ -54,6 +54,9 @@ $transition_selection: transform 500ms ease-in-out;
         }
         & > .choix__prix{
             transform: translateX(-100%);
+            @include tablet{
+                width: 8%;
+            }
         }
         & > .choix__transition_selection{
             transform: translateX(-100%);
