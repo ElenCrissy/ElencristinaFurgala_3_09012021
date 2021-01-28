@@ -17,7 +17,7 @@
     display: block;
     z-index: 999;
     opacity: 0;
-    -moz-transition: opacity 200ms ease 3s;
+    transition: opacity 200ms ease 3s;
     position: fixed;
     top: 50%;
     right: 50%;
